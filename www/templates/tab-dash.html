@@ -1,0 +1,32 @@
+<ion-view view-title="Dashboard">
+    <ion-content class="padding">
+        <div class="list card">
+            <div class="item item-divider">Recent Updates</div>
+            <div class="item item-body">
+                <div>
+                    There is a fire in <b>sector 3</b>
+                </div>
+            </div>
+        </div>
+        <div class="list card">
+            <div class="item item-divider">Health</div>
+            <div class="item item-body">
+                <div>
+                    {{ app_id }}
+                    {{ api_key }}
+                </div>
+            </div>
+        </div>
+        <div class="list card">
+            <textarea cols="80" rows="5">{{ token }}</textarea>
+        </div>
+        <div>
+            <button class="button button-block button-dark" ng-click="identifyUser()">Identify a user</button>
+        </div>
+        <div>
+            <button class="button button-block button-positive" ng-if="identified" ng-click="pushRegister()">
+                Register for Push
+            </button>
+        </div>
+    </ion-content>
+</ion-view>
